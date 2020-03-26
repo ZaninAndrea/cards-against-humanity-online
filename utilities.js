@@ -11,7 +11,9 @@ function initializeGame(collections, cards) {
     black = [...new Set(black)]
 
     white = cards.whiteCards.filter((text, i) => white.indexOf(i) !== -1)
-    black = cards.blackCards.filter((text, i) => black.indexOf(i) !== -1)
+    black = cards.blackCards.filter(
+        (card, i) => black.indexOf(i) !== -1 && card.pick === 1
+    )
 
     return {
         collections,
