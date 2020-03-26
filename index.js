@@ -228,6 +228,13 @@ io.on("connection", function(socket) {
         game.players = game.players.filter(
             player => player.id !== socket.playerId
         )
+
+        if (game.players.length === 0) {
+            game = initializeGame(
+                ["Base", "CAHe1", "CAHe2", "CAHe3", "CAHe4", "CAHe5", "CAHe6"],
+                cards
+            )
+        }
     })
 })
 
