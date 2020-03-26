@@ -1,7 +1,11 @@
 import React from "react"
 import "./App.css"
 
-let socket = window.io()
+let socket
+
+if (window.location.hostname === "localhost")
+    socket = window.io("localhost:5000")
+else socket = window.io()
 
 const sortByScore = (a, b) =>
     a.score > b.score ? -1 : a.score < b.score ? 1 : 0
@@ -36,7 +40,7 @@ class App extends React.Component {
             blackPlayer: "",
             scoreboard: [],
             joinedGame: false,
-            playerName: null,
+            playerName: "",
             lastPlayer: null,
         }
 
@@ -111,10 +115,11 @@ class App extends React.Component {
                     <div className="header">Cards Against Humanity</div>
                     <div id="lobbyPlayerList">
                         <div className="title">Connected players</div>
-                        {this.state.players.map(player => (
-                            <div className="player">{player.name}</div>
-                        ))}
-
+                        <div className="connectedPlayers">
+                            {this.state.players.map(player => (
+                                <div className="player">{player.name}</div>
+                            ))}
+                        </div>
                         {this.state.joinedGame ? (
                             <button
                                 onClick={() => {
