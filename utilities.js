@@ -556,7 +556,7 @@ function initializeGame(collections, cards) {
         "Cosa non vuoi trovare nel tuo cibo cinese?",
         "Bevo per dimenticare _",
         "_ Dammi un cinque fratello!",
-    ]
+    ].map(text => ({ text, pick: 1 }))
 
     return {
         collections,
