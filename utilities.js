@@ -496,7 +496,7 @@ function initializeGame(collections, cards) {
         "Cosa si mangia Vin Diesel per cena?",
         "Quando il faraone rimase impassibile, Mosè scateno la piaga _",
         "Come faccio a mantenere la mia attuale relazione?",
-        "Qual'è la cosa più incrostata?",
+        "Qual è la cosa più incrostata?",
         "Nel carcere di Los Angeles le voci dicono che puoi scambiare 200 sigarette per _",
         "Dopo il terremoto Sean Penn portò _ alle persone di Haiti.",
         "Invece del carbone la Befana ora porta ai bambini cattivi _",
